@@ -12,8 +12,8 @@ import {
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-import { createUser } from "./api/userApi";
-import { SignUpValidate as validate } from "./utils/validate";
+import { createUser } from "../api/userApi";
+import { SignUpValidate as validate } from "../utils/validate";
 
 const CustomTextField = styled(TextField)({
   "& .MuiOutlinedInput-root": {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, styled } from "@mui/material";
-import { loginValidate as validate } from "./utils/validate";
-import { loginUser } from "./api/authApi";
+import { loginValidate as validate } from "../utils/validate";
+import { loginUser } from "../api/authApi";
 import { useNavigate } from "react-router-dom";
 
 const CustomTextField = styled(TextField)({

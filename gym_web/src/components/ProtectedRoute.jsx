@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import api from "./api/axiosInstance";
+import api from "../api/axiosInstance";
 import { useNavigate } from "react-router-dom";
 export default function ProtectedRoute({ children }) {
   const [isValid, setIsValid] = useState(null);
