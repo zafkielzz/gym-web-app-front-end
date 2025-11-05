@@ -1,8 +1,5 @@
 import React from "react";
-
 const Home = () => {
-  console.log("test");
-
-  return <h1>Đây là Home</h1>;
+  return <h2>Đây là home</h2>;
 };
 export default Home;

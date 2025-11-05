@@ -1,31 +1,30 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
-import Home from "./Home";
+import Home from "./pages/Home";
+import Exercise from "./pages/Excercise";
+import Food from "./pages/Food";
+import Routine from "./pages//Routine";
+
 import ProtectedRoute from "./ProtectedRoute";
+import ToolBar from "./Component/ToolBar";
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/log-in" />} />
+        {/* ĐÂY LÀ PHẦN QUAN TRỌNG */}
+        <Route path="/" element={<ToolBar />}>
+          <Route index element={<Home />} />
+          <Route path="exercise" element={<Exercise />} />
+          <Route path="food" element={<Food />} />
+          <Route path="routine" element={<Routine />} />
+        </Route>
+
         <Route path="/sign-up" element={<SignUpForm />} />
         <Route path="/log-in" element={<LoginForm />} />
-        <Route
-          path="/home"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
